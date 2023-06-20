@@ -49,7 +49,7 @@ import com.example.cupcake.data.DataSource
 @Composable
 fun StartOrderScreen(
     quantityOptions: List<Pair<Int, Int>>,
-    onNextButtonClicked: (Int) -> Unit,
+    onNextButtonClicked: (Int) -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -64,7 +64,7 @@ fun StartOrderScreen(
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_medium)))
             Image(
                 painter = painterResource(R.drawable.cupcake),
-                contentDescription = null,
+                contentDescription = stringResource(R.string.image_cupcake),
                 modifier = Modifier.width(300.dp)
             )
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_medium)))
